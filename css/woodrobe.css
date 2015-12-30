@@ -247,7 +247,7 @@ a {
     padding-left: 30px;
     margin-top: 15px;
     position: relative; }
-    .woocommerce-account #customer_login label[for="rememberme"]:before {
+    .woocommerce-account #customer_login label[for="rememberme"] input {
       -webkit-transition: all 0.35s ease-in-out;
       -moz-transition: all 0.35s ease-in-out;
       -o-transition: all 0.35s ease-in-out;
@@ -257,16 +257,16 @@ a {
       -moz-transform: translateY(-50%);
       -o-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
-      content: '';
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 0;
       height: 15px;
       width: 15px;
       border: 1px solid #DDD;
       cursor: pointer; }
-    .woocommerce-account #customer_login label[for="rememberme"] input {
-      display: none; }
+      .woocommerce-account #customer_login label[for="rememberme"] input:checked {
+        background-color: #A3273D;
+        border-color: #A3273D; }
   .woocommerce-account #customer_login label[for="rememberme"], .woocommerce-account #customer_login .lost_password a {
     font-size: 0.875em;
     color: #A3273D; }

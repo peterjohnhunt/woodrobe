@@ -33,5 +33,6 @@ add_action( 'woocommerce_after_customer_login_form', 'woodrobe_form_login');
 
 function woodrobe_activate() {
     update_option( 'woocommerce_calc_shipping', 'yes' );
+    update_option( 'woocommerce_enable_myaccount_registration', 'yes' );
 }
 register_activation_hook( __FILE__, 'woodrobe_activate' );

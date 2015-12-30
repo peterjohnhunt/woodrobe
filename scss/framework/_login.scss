@@ -126,21 +126,34 @@
             margin-top:15px;
             position:relative;
 
-            &:before{
+            // &:before{
+            //     @include ease;
+            //     @include transform(translateY(-50%));
+            //     content:'';
+            //     position:absolute;
+            //     top:50%;
+            //     left:0;
+            //     height:15px;
+            //     width:15px;
+            //     border:1px solid c(gray);
+            //     cursor:pointer;
+            // }
+
+            input{
+                // display:none;
                 @include ease;
                 @include transform(translateY(-50%));
-                content:'';
                 position:absolute;
-                top:50%;
+                top:40%;
                 left:0;
                 height:15px;
                 width:15px;
                 border:1px solid c(gray);
                 cursor:pointer;
-            }
-
-            input{
-                display:none;
+                &:checked {
+                    background-color: c(secondary);
+                    border-color: c(secondary);
+                }
             }
         }
 
