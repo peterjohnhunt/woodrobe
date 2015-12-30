@@ -141,6 +141,10 @@
             }
         }
 
+        legend{
+            display:none;
+        }
+
         input:not([type="submit"]){
             @extend %light;
             @include ease;
