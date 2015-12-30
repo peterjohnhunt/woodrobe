@@ -1,0 +1,33 @@
+.wdrobe-button{
+    @extend %light;
+    @include ease;
+    font-size:em(16);
+    color:c(secondary);
+    border:1px solid c(secondary);
+    padding:10px 18px;
+    display:inline-block;
+    border-radius:0;
+    background-color:transparent;
+    cursor:pointer;
+
+    &:hover{
+        @extend %bg-secondary;
+        color:c(white);
+    }
+}
+
+.wdrobe-button--inverse{
+    @extend %light;
+    @include ease;
+    font-size:em(16);
+    color:c(white);
+    border:1px solid c(white);
+    padding:10px 18px;
+    display:inline-block;
+    cursor:pointer;
+
+    &:hover{
+        @extend %bg-white;
+        color:c(secondary);
+    }
+}

@@ -1,0 +1,29 @@
+//░░░░░░░░░░░░░░░░░░░░░░░░
+//
+//     DIRECTORY
+//
+//     _EmptyCart
+//
+//░░░░░░░░░░░░░░░░░░░░░░░░
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _EmptyCart
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.woocommerce-cart{
+    .cart-empty{
+        margin-top:40px;
+        margin-bottom:15px;
+
+        &, + .return-to-shop{
+            text-align:center;
+        }
+
+        + .return-to-shop{
+            a{
+                @extend .wdrobe-button;
+                margin-bottom:40px;
+            }
+        }
+    }
+}

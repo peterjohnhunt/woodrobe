@@ -1,0 +1,211 @@
+//░░░░░░░░░░░░░░░░░░░░░░░░
+//
+//     DIRECTORY
+//
+//     _MyAccount
+//
+//░░░░░░░░░░░░░░░░░░░░░░░░
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _MyAccount
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+.woocommerce-account{
+    #customer_login{
+        @extend %bg-primary;
+        // @include bg-gradient;
+        width:100%;
+        position:relative;
+        overflow:hidden;
+
+        &.shift-to-register{
+            > .col-1{
+                left:-100%;
+            }
+
+            > .col-2{
+                left:calc(50% - 60px);
+            }
+
+            + .wdrobe-toggle{
+                left:calc(60px - 30px);
+            }
+        }
+
+        > div{
+            @extend %bg-white;
+            -webkit-transition: all 350ms cubic-bezier(0.480, 0.865, 0.575, 1);
+            -webkit-transition: all 350ms cubic-bezier(0.480, 0.865, 0.575, 1.080);
+            -moz-transition: all 350ms cubic-bezier(0.480, 0.865, 0.575, 1.080);
+            -o-transition: all 350ms cubic-bezier(0.480, 0.865, 0.575, 1.080);
+            transition: all 350ms cubic-bezier(0.480, 0.865, 0.575, 1.080);
+            padding:40px;
+            margin:30px;
+            height:380px;
+            width:50%;
+            box-sizing:border-box;
+            top:0;
+            box-shadow:0 8px 8px 0 rgba(c(black),0.5);
+            z-index:2;
+
+            h2{
+                @extend %bg-white;
+                @extend %semi;
+                color:c(secondary);
+                padding:0 20px;
+                margin-bottom:30px;
+                display:inline-block;
+            }
+
+            form{
+                border:none;
+                border-radius:0;
+                margin-top:-12px;
+                margin-bottom:0;
+            }
+        }
+
+        > .col-1{
+            position:relative;
+            left:0;
+        }
+
+        > .col-2{
+            position:absolute;
+            left:100%;
+        }
+
+        .form-row-wide{
+            position:relative;
+            margin-bottom:30px;
+
+            &:hover, &.completed{
+                label{
+                    font-size:em(13);
+                    color:c(gray);
+                    top:-24px;
+                }
+            }
+
+            label{
+                @include ease;
+                position:absolute;
+                top:-2px;
+                left:3px;
+
+                span{
+                    display:none;
+                }
+            }
+
+            input{
+                @extend %light;
+                font-size:em(16);
+                line-height:em(18,16);
+                color:c(black);
+                padding-bottom:10px;
+                border-bottom:1px solid c(gray);
+            }
+        }
+
+        .form-row{
+            padding:0;
+        }
+
+        input[type="submit"]{
+            @extend .wdrobe-button;
+            padding:10px 0;
+            width:150px;
+            margin-bottom:10px;
+        }
+
+        label[for="rememberme"]{
+            display:block;
+            cursor:pointer;
+            padding-left:30px;
+            margin-top:15px;
+            position:relative;
+
+            &:before{
+                @include ease;
+                @include transform(translateY(-50%));
+                content:'';
+                position:absolute;
+                top:50%;
+                left:0;
+                height:15px;
+                width:15px;
+                border:1px solid c(gray);
+                cursor:pointer;
+            }
+
+            input{
+                display:none;
+            }
+        }
+
+        label[for="rememberme"],.lost_password a{
+            font-size:em(14);
+            color:c(secondary);
+        }
+    }
+
+    .woocommerce-error{
+        position:absolute;
+        width:100%;
+        box-sizing:border-box;
+        top:-52px;
+        left:0;
+
+        + div{
+            margin-top:52px;
+        }
+    }
+
+    .woocommerce{
+        position:relative;
+    }
+
+    .wdrobe-toggle{
+        @extend %bg-secondary;
+        @include ease;
+        left:30px;
+        height:75%;
+        width:calc(100% - 60px);
+        z-index:1;
+        box-shadow:5px 5px 5px 0 rgba(c(black),0.3);
+
+        &,> div{
+            @include transform(translateY(-50%));
+            position:absolute;
+            top:50%;
+        }
+
+        > div{
+            width:50%;
+            box-sizing:border-box;
+
+            h2,p{
+                color:c(white);
+            }
+
+            h2{
+                margin-bottom:10px;
+            }
+
+            p{
+                margin-bottom:20px;
+            }
+        }
+
+        .register-hint{
+            padding:30px 100px;
+            left:50%;
+        }
+
+        .login-hint{
+            padding:30px 70px;
+            left:0;
+        }
+    }
+}

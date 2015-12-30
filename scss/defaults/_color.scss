@@ -1,0 +1,38 @@
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _ColorGenerator
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+//░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+// ∟Defaults
+//░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+// Primary   :: Charcoal Black
+// Secondary :: Red
+// Tertiary  :: Gray
+
+//░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+// ∟Map
+//░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+$color-map:(
+    white     :#FFF,
+    gray      :#DDD,
+    black     :#000,
+    primary   :#333,
+    secondary :#A3273D,
+    tertiary  :#D0D0D0
+);
+
+@each $color,$value in $color-map{
+    %bg-#{$color}{
+        background-color:$value;
+    }
+}
+
+@mixin bg-gradient($start:c(primary),$end:darken(c(primary),10%)){
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(top,  rgba($start,1) 50%, rgba($start,1) 68%, rgba($end,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba($start,1) 50%,rgba($start,1) 68%,rgba($end,1) 100%);
+    background: linear-gradient(to bottom,  rgba($start,1) 50%,rgba($start,1) 68%,rgba($end,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 );
+}
