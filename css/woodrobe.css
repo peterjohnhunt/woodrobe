@@ -95,7 +95,7 @@ input {
 h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child, p:last-child, a:last-child, input:last-child, textarea:last-child {
   margin-bottom: 0; }
 
-.wdrobe-button--inverse:hover, .woocommerce-account #customer_login > div, .woocommerce-account #customer_login > div h2, .woocommerce .woocommerce-error, .woocommerce .woocommerce-message, .woocommerce-account.logged-in .woocommerce h2, .woocommerce-account.logged-in .woocommerce .myaccount_address, .woocommerce-account.logged-in .woocommerce > .address, .woocommerce-account.logged-in .woocommerce > .addresses, .woocommerce-account.woocommerce-edit-address form, .woocommerce-account.woocommerce-edit-account form, .select2-drop .select2-results {
+.wdrobe-button--inverse:hover, .woocommerce-account #customer_login > div, .woocommerce-account #customer_login > div h2, .woocommerce-cart .woocommerce > form, .woocommerce .woocommerce-error, .woocommerce .woocommerce-message, .woocommerce-account.logged-in .woocommerce h2, .woocommerce-account.logged-in .woocommerce .myaccount_address, .woocommerce-account.logged-in .woocommerce > .address, .woocommerce-account.logged-in .woocommerce > .addresses, .woocommerce-account.woocommerce-edit-address form, .woocommerce-account.woocommerce-edit-account form, .select2-drop .select2-results {
   background-color: #FFF; }
 
 .woocommerce-account #customer_login {
@@ -322,6 +322,24 @@ a {
   .woocommerce-cart .cart-empty + .return-to-shop a {
     margin-bottom: 40px; }
 
+.woocommerce-cart .woocommerce {
+  background-color: #e2e2e2;
+  box-sizing: border-box;
+  display: block;
+  padding: 30px; }
+  .woocommerce-cart .woocommerce > form {
+    padding: 30px;
+    box-sizing: border-box;
+    border: 1px solid #c4c4c4;
+    box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px; }
+.woocommerce-cart .cart-collaterals .cart_totals {
+  background-color: #e5e5e5;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 1px solid #c4c4c4;
+  margin-bottom: 30px; }
+
 .woocommerce .woocommerce-error, .woocommerce .woocommerce-error li, .woocommerce .woocommerce-error, .woocommerce .woocommerce-error li, .woocommerce .woocommerce-message, .woocommerce .woocommerce-message li {
   font-family: "Open Sans", sans-serif; }
 
@@ -413,6 +431,8 @@ a {
     margin-bottom: 10px; }
     .woocommerce-account.woocommerce-edit-address form label abbr, .woocommerce-account.woocommerce-edit-address form label span, .woocommerce-account.woocommerce-edit-account form label abbr, .woocommerce-account.woocommerce-edit-account form label span {
       display: none; }
+  .woocommerce-account.woocommerce-edit-address form legend, .woocommerce-account.woocommerce-edit-account form legend {
+    display: none; }
   .woocommerce-account.woocommerce-edit-address form input:not([type="submit"]), .woocommerce-account.woocommerce-edit-account form input:not([type="submit"]) {
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
