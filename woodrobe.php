@@ -39,7 +39,7 @@ function woodrobe_gateway_icon( $icon, $gatewayID ){
 }
 add_filter( 'woocommerce_gateway_icon', 'woodrobe_gateway_icon', 10, 2 );
 
-function my_body_classes( $classes ) {
+function woodrobe_body_class( $classes ) {
 
     if ( is_woocommerce() || is_cart() || is_checkout() ) {
         $classes[] = 'woodrobe';
@@ -47,7 +47,7 @@ function my_body_classes( $classes ) {
     return $classes;
 
 }
-add_filter( 'body_class','my_body_classes' );
+add_filter( 'body_class','woodrobe_body_class' );
 
 function woodrobe_activate() {
     update_option( 'woocommerce_calc_shipping', 'yes' );
