@@ -2,4 +2,10 @@
 @import "defaults/__directory";
 .woodrobe{
     @import "framework/__directory";
+
+    .woocommerce{
+        p{
+            line-height:1.25em;
+        }
+    }
 }
