@@ -1,14 +1,18 @@
 .woocommerce {
-    .woocommerce-error,.woocommerce-error,.woocommerce-message {
+    .woocommerce-error,.woocommerce-error,.woocommerce-message,.woocommerce-info {
         @extend %bg-white;
 
-        &,li{
-            font-family:$family;
+        &,li, a{
+            font-family:$family !important;
+        }
+
+        a{
+            color:c(secondary);
         }
     }
 }
 
-.woocommerce-account.logged-in{
+.woocommerce-account.logged-in, .woocommerce-checkout{
     .woocommerce{
         .woocommerce-error,.woocommerce-info,.woocommerce-message{
             box-sizing:border-box;
