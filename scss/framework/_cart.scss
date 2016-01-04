@@ -13,19 +13,21 @@
 // _EmptyCart
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-cart{
-    .cart-empty{
-        margin-top:40px;
-        margin-bottom:15px;
+&.woocommerce-cart{
+    .woocommerce{
+        .cart-empty{
+            margin-top:40px;
+            margin-bottom:15px;
 
-        &, + .return-to-shop{
-            text-align:center;
-        }
+            &, + .return-to-shop{
+                text-align:center;
+            }
 
-        + .return-to-shop{
-            a{
-                @extend .wdrobe-button;
-                margin-bottom:40px;
+            + .return-to-shop{
+                a{
+                    @extend .wdrobe-button;
+                    margin-bottom:40px;
+                }
             }
         }
     }
@@ -36,7 +38,7 @@
 // _Products
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-cart{
+&.woocommerce-cart{
     .woocommerce{
         background-color:lighten(c(gray),2%);
         box-sizing:border-box;
@@ -44,63 +46,61 @@
         padding:30px;
 
         > form{
-            @extend %bg-white;
+            @extend %wd-bg-white;
             padding:30px;
             box-sizing:border-box;
             border:1px solid darken(c(gray), 10%);
             box-shadow:0 3px 4px -2px rgba(c(black),0.3);
             margin-bottom:30px;
         }
-    }
 
+        .shop_table.cart{
+            border-radius:0;
 
-
-    .shop_table.cart{
-        border-radius:0;
-        
-        th{
-            @extend %reg;
-        }
-
-        .cart_item{
-            .remove{
-                border-radius:0;
+            th{
+                @extend %reg;
             }
 
-            *{
+            .cart_item{
+                .remove{
+                    border-radius:0;
+                }
+
+                *{
+                    @extend %light;
+                }
+
+                a{
+                    color:c(secondary);
+                }
+
+                .input-text{
+                    font-size:em(16);
+                }
+            }
+        }
+
+        .coupon{
+            input[type="text"]{
                 @extend %light;
-            }
-
-            a{
-                color:c(secondary);
-            }
-
-            .input-text{
                 font-size:em(16);
+                line-height:em(18,16) !important;
+                color:c(black);
+                padding:10px 15px !important;
+                border-color:c(gray) !important;
+                width:130px !important;
+            }
+
+            input[type="submit"]{
+                @extend .wdrobe-button;
+                padding:10px 15px;
             }
         }
-    }
 
-    .coupon{
-        input[type="text"]{
-            @extend %light;
-            font-size:em(16);
-            line-height:em(18,16) !important;
-            color:c(black);
-            padding:10px 15px !important;
-            border-color:c(gray) !important;
-            width:130px !important;
-        }
-
-        input[type="submit"]{
+        .actions > .button{
             @extend .wdrobe-button;
             padding:10px 15px;
         }
-    }
-
-    .actions > .button{
-        @extend .wdrobe-button;
-        padding:10px 15px;
     }
 }
 
@@ -109,9 +109,118 @@
 // _Totals
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-cart{
-    .cart-collaterals{
-        .cart_totals{
+&.woocommerce-cart{
+    .woocommerce{
+        .cart-collaterals{
+            .cart_totals{
+                background-color:lighten(c(gray),5%);
+                padding:30px;
+                box-sizing:border-box;
+                border:1px solid darken(c(gray), 10%);
+                margin-bottom:30px;
+
+                h2{
+                    margin-bottom:20px;
+                    border-bottom:1px solid darken(c(gray), 10%);
+                    padding-bottom:20px;
+                }
+
+                table{
+                    @extend %wd-bg-white;
+                    box-sizing:border-box;
+                    border:1px solid darken(c(gray), 10%);
+                    box-shadow:0 3px 4px -2px rgba(c(black),0.3);
+                    margin-bottom:10px;
+
+                    th{
+                        @extend %semi;
+                        font-size:em(14);
+                    }
+
+                    td{
+                        *{
+                            @extend %light;
+                        }
+
+                        a{
+                            color:c(secondary);
+                        }
+
+                        .shipping-calculator-button{
+                            @extend .wdrobe-button;
+                            font-size:em(12);
+                            padding:4px 10px;
+                            margin-top:10px;
+                            border-color:c(gray);
+                            color:darken(c(gray),20%);
+
+                            &:hover{
+                                border-color:c(secondary);
+                            }
+                        }
+
+                        .shipping-calculator-form{
+                            border:1px solid c(gray);
+                            padding:6px 10px;
+                            box-sizing:border-box;
+                            margin-top:-1px;
+                            margin-right:7px;
+                        }
+                    }
+
+                    tr.shipping{
+                        td{
+                            padding:10px 0;
+
+                            p{
+                                margin-right:7px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wc-proceed-to-checkout{
+                padding-bottom:0;
+                a{
+                    @extend .wdrobe-button;
+                    margin-bottom:0;
+                    padding-left:0;
+                    padding-right:0;
+                    width:100%;
+                }
+            }
+
+            .shipping-calculator-form{
+                .form-row{
+                    border:1px solid c(gray);
+                }
+
+                .button{
+                    @extend %wd-bg-tertiary;
+                    @extend %light;
+                    @include ease;
+                    font-size:em(12);
+                    border-radius:0;
+                    padding:5px 10px;
+
+                    &:hover{
+                        background-color:darken(c(tertiary),10%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+// _CrossSells
+//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+&.woocommerce-cart{
+    .woocommerce{
+        .cross-sells{
             background-color:lighten(c(gray),5%);
             padding:30px;
             box-sizing:border-box;
@@ -124,119 +233,14 @@
                 padding-bottom:20px;
             }
 
-            table{
-                @extend %bg-white;
+            .products{
+                @extend %wd-bg-white;
                 box-sizing:border-box;
                 border:1px solid darken(c(gray), 10%);
                 box-shadow:0 3px 4px -2px rgba(c(black),0.3);
-                margin-bottom:10px;
-
-                th{
-                    @extend %semi;
-                    font-size:em(14);
-                }
-
-                td{
-                    *{
-                        @extend %light;
-                    }
-
-                    a{
-                        color:c(secondary);
-                    }
-
-                    .shipping-calculator-button{
-                        @extend .wdrobe-button;
-                        font-size:em(12);
-                        padding:4px 10px;
-                        margin-top:10px;
-                        border-color:c(gray);
-                        color:darken(c(gray),20%);
-
-                        &:hover{
-                            border-color:c(secondary);
-                        }
-                    }
-
-                    .shipping-calculator-form{
-                        border:1px solid c(gray);
-                        padding:6px 10px;
-                        box-sizing:border-box;
-                        margin-top:-1px;
-                        margin-right:7px;
-                    }
-                }
-
-                tr.shipping{
-                    td{
-                        padding:10px 0;
-
-                        p{
-                            margin-right:7px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .wc-proceed-to-checkout{
-            padding-bottom:0;
-            a{
-                @extend .wdrobe-button;
                 margin-bottom:0;
-                padding-left:0;
-                padding-right:0;
-                width:100%;
+                padding:30px;
             }
-        }
-
-        .shipping-calculator-form{
-            .form-row{
-                border:1px solid c(gray);
-            }
-
-            .button{
-                @extend %bg-tertiary;
-                @extend %light;
-                @include ease;
-                font-size:em(12);
-                border-radius:0;
-                padding:5px 10px;
-
-                &:hover{
-                    background-color:darken(c(tertiary),10%);
-                }
-            }
-        }
-    }
-}
-
-
-//▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-// _CrossSells
-//▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-.woocommerce-cart{
-    .cross-sells{
-        background-color:lighten(c(gray),5%);
-        padding:30px;
-        box-sizing:border-box;
-        border:1px solid darken(c(gray), 10%);
-        margin-bottom:30px;
-
-        h2{
-            margin-bottom:20px;
-            border-bottom:1px solid darken(c(gray), 10%);
-            padding-bottom:20px;
-        }
-
-        .products{
-            @extend %bg-white;
-            box-sizing:border-box;
-            border:1px solid darken(c(gray), 10%);
-            box-shadow:0 3px 4px -2px rgba(c(black),0.3);
-            margin-bottom:0;
-            padding:30px;
         }
     }
 }

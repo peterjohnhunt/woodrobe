@@ -14,7 +14,7 @@
 // _Frame
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-checkout{
+&.woocommerce-checkout{
     .woocommerce{
         background-color:lighten(c(gray),2%);
         box-sizing:border-box;
@@ -28,80 +28,82 @@
 // _Login
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-checkout{
-    .login{
-        border-radius:0 !important;
+&.woocommerce-checkout{
+    .woocommerce{
+        .login{
+            border-radius:0 !important;
 
-        p{
-            padding:0;
+            p{
+                padding:0;
 
-            &:first-child{
-                margin-bottom:15px;
-            }
-        }
-
-        label{
-            font-size:em(14);
-            color:darken(c(gray), 10%);
-            margin-bottom:10px;
-
-            abbr, span{
-                display:none;
-            }
-        }
-
-        input{
-            @extend %light;
-            @include ease;
-            font-size:em(16);
-            line-height:em(18,16);
-            color:c(black);
-            padding-bottom:10px;
-            border-bottom:1px solid c(gray);
-
-            &:focus{
-                border-color:darken(c(gray), 30%);
-            }
-        }
-
-        input[type="submit"]{
-            @extend .wdrobe-button;
-            padding:10px 0;
-            width:150px;
-            margin-bottom:10px;
-            margin-top:20px;
-        }
-
-        label[for="rememberme"]{
-            display:block !important;
-            cursor:pointer;
-            padding-left:30px;
-            margin-top:15px;
-            position:relative;
-            margin-bottom:0;
-
-            input{
-                @include ease;
-                @include transform(translateY(-50%));
-                position:absolute;
-                top:40%;
-                left:0;
-                height:15px;
-                width:15px;
-                border:1px solid c(gray);
-                cursor:pointer;
-                margin-left:0;
-
-                &:checked {
-                    background-color: c(secondary);
-                    border-color: c(secondary);
+                &:first-child{
+                    margin-bottom:15px;
                 }
             }
-        }
 
-        label[for="rememberme"],.lost_password a{
-            font-size:em(14);
-            color:c(secondary);
+            label{
+                font-size:em(14);
+                color:darken(c(gray), 10%);
+                margin-bottom:10px;
+
+                abbr, span{
+                    display:none;
+                }
+            }
+
+            input{
+                @extend %light;
+                @include ease;
+                font-size:em(16);
+                line-height:em(18,16);
+                color:c(black);
+                padding-bottom:10px;
+                border-bottom:1px solid c(gray);
+
+                &:focus{
+                    border-color:darken(c(gray), 30%);
+                }
+            }
+
+            input[type="submit"]{
+                @extend .wdrobe-button;
+                padding:10px 0;
+                width:150px;
+                margin-bottom:10px;
+                margin-top:20px;
+            }
+
+            label[for="rememberme"]{
+                display:block !important;
+                cursor:pointer;
+                padding-left:30px;
+                margin-top:15px;
+                position:relative;
+                margin-bottom:0;
+
+                input{
+                    @include ease;
+                    @include transform(translateY(-50%));
+                    position:absolute;
+                    top:40%;
+                    left:0;
+                    height:15px;
+                    width:15px;
+                    border:1px solid c(gray);
+                    cursor:pointer;
+                    margin-left:0;
+
+                    &:checked {
+                        background-color: c(secondary);
+                        border-color: c(secondary);
+                    }
+                }
+            }
+
+            label[for="rememberme"],.lost_password a{
+                font-size:em(14);
+                color:c(secondary);
+            }
         }
     }
 }
@@ -111,43 +113,45 @@
 // _Coupon
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-checkout{
-    .checkout_coupon{
-        border-radius:0 !important;
+&.woocommerce-checkout{
+    .woocommerce{
+        .checkout_coupon{
+            border-radius:0 !important;
 
-        p{
-            padding:0;
-            margin-bottom:0;
-        }
-
-        label{
-            font-size:em(14);
-            color:darken(c(gray), 10%);
-            margin-bottom:10px;
-
-            abbr, span{
-                display:none;
+            p{
+                padding:0;
+                margin-bottom:0;
             }
-        }
 
-        input{
-            @extend %light;
-            @include ease;
-            font-size:em(16);
-            line-height:em(18,16);
-            color:c(black);
-            padding-bottom:10px;
-            border-bottom:1px solid c(gray);
+            label{
+                font-size:em(14);
+                color:darken(c(gray), 10%);
+                margin-bottom:10px;
 
-            &:focus{
-                border-color:darken(c(gray), 30%);
+                abbr, span{
+                    display:none;
+                }
             }
-        }
 
-        input[type="submit"]{
-            @extend .wdrobe-button;
-            padding:10px 0;
-            width:150px;
+            input{
+                @extend %light;
+                @include ease;
+                font-size:em(16);
+                line-height:em(18,16);
+                color:c(black);
+                padding-bottom:10px;
+                border-bottom:1px solid c(gray);
+
+                &:focus{
+                    border-color:darken(c(gray), 30%);
+                }
+            }
+
+            input[type="submit"]{
+                @extend .wdrobe-button;
+                padding:10px 0;
+                width:150px;
+            }
         }
     }
 }
@@ -157,10 +161,10 @@
 // _Form
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-checkout{
+&.woocommerce-checkout{
     .woocommerce{
         > form{
-            @extend %bg-white;
+            @extend %wd-bg-white;
             padding:30px;
             box-sizing:border-box;
             border:1px solid darken(c(gray), 10%);
@@ -210,7 +214,7 @@
 // _OrderReview
 //▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-.woocommerce-checkout{
+&.woocommerce-checkout{
     #order_review_heading{
         &:before{
             content:'';
@@ -223,7 +227,7 @@
     }
 
     #payment.woocommerce-checkout-payment{
-        @extend %bg-gray;
+        @extend %wd-bg-gray;
         border-radius:0 !important;
         padding:20px;
         box-sizing:border-box;
@@ -232,7 +236,7 @@
 
         .payment_methods.methods{
             padding-top:0;
-            
+
             li{
                 *{
                     font-family:$family;
@@ -252,7 +256,7 @@
     }
 
     #payment div.payment_box{
-        @extend %bg-white;
+        @extend %wd-bg-white;
         margin-top:0;
 
         &::before{
@@ -282,7 +286,7 @@
             box-shadow:0 3px 4px -1px rgba(c(black),0.3);
 
             *{
-                @extend %bg-gray;
+                @extend %wd-bg-gray;
                 font-weight:700 !important;
             }
         }

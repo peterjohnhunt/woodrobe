@@ -11,7 +11,7 @@
     cursor:pointer;
 
     &:hover{
-        @extend %bg-secondary;
+        @extend %wd-bg-secondary;
         color:c(white);
     }
 }
@@ -27,7 +27,7 @@
     cursor:pointer;
 
     &:hover{
-        @extend %bg-white;
+        @extend %wd-bg-white;
         color:c(secondary);
     }
 }
