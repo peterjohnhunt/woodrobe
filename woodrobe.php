@@ -31,6 +31,24 @@ function woodrobe_form_login(){
 }
 add_action( 'woocommerce_after_customer_login_form', 'woodrobe_form_login');
 
+function woodrobe_gateway_icon( $icon, $gatewayID ){
+
+    $icon = str_replace('https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg', plugin_dir_url( __FILE__ ).'/assets/AM_mc_vs_dc_ae.png' , $icon);
+
+    return $icon;
+}
+add_filter( 'woocommerce_gateway_icon', 'woodrobe_gateway_icon', 10, 2 );
+
+function my_body_classes( $classes ) {
+
+    if ( is_woocommerce() || is_cart() || is_checkout() ) {
+        $classes[] = 'woodrobe';
+    }
+    return $classes;
+
+}
+add_filter( 'body_class','my_body_classes' );
+
 function woodrobe_activate() {
     update_option( 'woocommerce_calc_shipping', 'yes' );
     update_option( 'woocommerce_enable_myaccount_registration', 'yes' );
