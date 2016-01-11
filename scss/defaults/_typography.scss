@@ -81,3 +81,11 @@ p{
 a{
     display:inline-block;
 }
+
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+@include breakpoint(phone){
+	h2{
+		font-size:em(16);
+	}
+}

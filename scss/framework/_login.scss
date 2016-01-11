@@ -58,6 +58,7 @@
             }
 
             form{
+                @include ease;
                 border:none;
                 border-radius:0;
                 margin-top:-12px;
@@ -195,6 +196,14 @@
             p{
                 margin-bottom:20px;
             }
+
+            .wdrobe-button--inverse{
+                span{
+                    &:first-child{
+                        font-size:0;
+                    }
+                }
+            }
         }
 
         .register-hint{
@@ -205,6 +214,97 @@
         .login-hint{
             padding:30px 70px;
             left:0;
+        }
+    }
+}
+
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+&.woocommerce-account{
+    @include breakpoint(laptop){
+        #customer_login{
+            padding-bottom:90px;
+
+            &.shift-to-register{
+                > .col-1{
+                    top:-420px;
+                }
+
+                > .col-2{
+                    top:90px;
+                }
+
+                + .wdrobe-toggle{
+                    left:60px;
+                }
+            }
+
+            > div{
+                width:calc(100% - 60px);
+                left:0 !important;
+            }
+
+            .col-2{
+                top:100%;
+            }
+
+        }
+
+        .wdrobe-toggle{
+            height:85%;
+            width:calc(100% - 120px);
+            left:60px;
+
+            > div{
+                width:100%;
+                left:0 !important;
+                text-align:center;
+                padding:0 !important;
+
+                h2,p{
+                    display:none;
+                }
+
+                .wdrobe-button--inverse{
+                    span{
+                        &:first-child{
+                            font-size:inherit;
+                        }
+                        &:last-child{
+                            font-size:0;
+                        }
+                    }
+                }
+            }
+
+            .login-hint{
+                top:9%;
+            }
+
+            .register-hint{
+                top:91%;
+            }
+        }
+    }
+    @include breakpoint(phablet){
+        #customer_login{
+            > div{
+                padding:25px;
+
+                form{
+                    padding-right:0;
+                }
+
+                h2,form{
+                    padding-left:0;
+                }
+            }
+
+            .form-row-wide{
+                label{
+                    font-size:em(14);
+                }
+            }
         }
     }
 }

@@ -147,6 +147,9 @@ p {
 a {
   display: inline-block; }
 
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1em; } }
 .wdrobe-button, .woodrobe.woocommerce-account #customer_login input[type="submit"], .woodrobe.woocommerce-cart .woocommerce .cart-empty + .return-to-shop a, .woodrobe.woocommerce-cart .woocommerce .coupon input[type="submit"], .woodrobe.woocommerce-cart .woocommerce .actions > .button, .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td .shipping-calculator-button, .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .wc-proceed-to-checkout a, .woodrobe.woocommerce-account.logged-in .woocommerce .address .edit, .woodrobe.woocommerce-checkout .woocommerce .login input[type="submit"], .woodrobe.woocommerce-checkout .woocommerce .checkout_coupon input[type="submit"], .woodrobe.woocommerce-checkout #place_order {
   -webkit-transition: all 0.35s ease-in-out;
   -moz-transition: all 0.35s ease-in-out;
@@ -207,6 +210,10 @@ a {
       margin-bottom: 30px;
       display: inline-block; }
     .woodrobe.woocommerce-account #customer_login > div form {
+      -webkit-transition: all 0.35s ease-in-out;
+      -moz-transition: all 0.35s ease-in-out;
+      -o-transition: all 0.35s ease-in-out;
+      transition: all 0.35s ease-in-out;
       border: none;
       border-radius: 0;
       margin-top: -12px;
@@ -312,12 +319,56 @@ a {
       margin-bottom: 10px; }
     .woodrobe.woocommerce-account .wdrobe-toggle > div p {
       margin-bottom: 20px; }
+    .woodrobe.woocommerce-account .wdrobe-toggle > div .wdrobe-button--inverse span:first-child {
+      font-size: 0; }
   .woodrobe.woocommerce-account .wdrobe-toggle .register-hint {
     padding: 30px 100px;
     left: 50%; }
   .woodrobe.woocommerce-account .wdrobe-toggle .login-hint {
     padding: 30px 70px;
     left: 0; }
+@media (max-width: 850px) {
+  .woodrobe.woocommerce-account #customer_login {
+    padding-bottom: 90px; }
+    .woodrobe.woocommerce-account #customer_login.shift-to-register > .col-1 {
+      top: -420px; }
+    .woodrobe.woocommerce-account #customer_login.shift-to-register > .col-2 {
+      top: 90px; }
+    .woodrobe.woocommerce-account #customer_login.shift-to-register + .wdrobe-toggle {
+      left: 60px; }
+    .woodrobe.woocommerce-account #customer_login > div {
+      width: calc(100% - 60px);
+      left: 0 !important; }
+    .woodrobe.woocommerce-account #customer_login .col-2 {
+      top: 100%; }
+  .woodrobe.woocommerce-account .wdrobe-toggle {
+    height: 85%;
+    width: calc(100% - 120px);
+    left: 60px; }
+    .woodrobe.woocommerce-account .wdrobe-toggle > div {
+      width: 100%;
+      left: 0 !important;
+      text-align: center;
+      padding: 0 !important; }
+      .woodrobe.woocommerce-account .wdrobe-toggle > div h2, .woodrobe.woocommerce-account .wdrobe-toggle > div p {
+        display: none; }
+      .woodrobe.woocommerce-account .wdrobe-toggle > div .wdrobe-button--inverse span:first-child {
+        font-size: inherit; }
+      .woodrobe.woocommerce-account .wdrobe-toggle > div .wdrobe-button--inverse span:last-child {
+        font-size: 0; }
+    .woodrobe.woocommerce-account .wdrobe-toggle .login-hint {
+      top: 9%; }
+    .woodrobe.woocommerce-account .wdrobe-toggle .register-hint {
+      top: 91%; } }
+@media (max-width: 600px) {
+  .woodrobe.woocommerce-account #customer_login > div {
+    padding: 25px; }
+    .woodrobe.woocommerce-account #customer_login > div form {
+      padding-right: 0; }
+    .woodrobe.woocommerce-account #customer_login > div h2, .woodrobe.woocommerce-account #customer_login > div form {
+      padding-left: 0; }
+  .woodrobe.woocommerce-account #customer_login .form-row-wide label {
+    font-size: 0.875em; } }
 .woodrobe.woocommerce-cart .woocommerce .cart-empty {
   margin-top: 40px;
   margin-bottom: 15px; }
@@ -336,6 +387,8 @@ a {
     border: 1px solid #c4c4c4;
     box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.3);
     margin-bottom: 30px; }
+    .woodrobe.woocommerce-cart .woocommerce > form > table.shop_table {
+      margin-bottom: 0; }
   .woodrobe.woocommerce-cart .woocommerce .shop_table.cart {
     border-radius: 0; }
     .woodrobe.woocommerce-cart .woocommerce .shop_table.cart .cart_item .remove {
@@ -355,6 +408,33 @@ a {
     padding: 10px 15px; }
   .woodrobe.woocommerce-cart .woocommerce .actions > .button {
     padding: 10px 15px; }
+@media (max-width: 768px) {
+  .woodrobe.woocommerce-cart .woocommerce .coupon input[type="text"] {
+    -webkit-transition: all 0s 0s ease-in-out;
+    -moz-transition: all 0s 0s ease-in-out;
+    -o-transition: all 0s 0s ease-in-out;
+    transition: all 0s 0s ease-in-out;
+    width: 50% !important; }
+  .woodrobe.woocommerce-cart .woocommerce .coupon + input[type="submit"] {
+    width: 100%; } }
+@media (max-width: 500px) {
+  .woodrobe.woocommerce-cart .woocommerce > form {
+    padding: 0;
+    border: none; }
+  .woodrobe.woocommerce-cart .woocommerce .shop_table.cart th {
+    padding-left: 0;
+    font-size: 0.875em; }
+  .woodrobe.woocommerce-cart .woocommerce .shop_table.cart td:not(.actions) {
+    padding-left: 0;
+    padding-right: 0; }
+    .woodrobe.woocommerce-cart .woocommerce .shop_table.cart td:not(.actions) span, .woodrobe.woocommerce-cart .woocommerce .shop_table.cart td:not(.actions) a:not(.remove) {
+      font-size: 0.875em; }
+  .woodrobe.woocommerce-cart .woocommerce .shop_table.cart td.product-subtotal {
+    padding-right: 5px; }
+  .woodrobe.woocommerce-cart .woocommerce .coupon input[type="text"], .woodrobe.woocommerce-cart .woocommerce .coupon input[type="submit"] {
+    width: 100% !important; }
+  .woodrobe.woocommerce-cart .woocommerce .coupon input[type="text"] {
+    margin-bottom: 8px !important; } }
 .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals {
   background-color: #eaeaea;
   padding: 30px;
@@ -369,7 +449,8 @@ a {
     box-sizing: border-box;
     border: 1px solid #c4c4c4;
     box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.3);
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    width: 100%; }
     .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table th {
       font-size: 0.875em; }
     .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td a {
@@ -398,7 +479,8 @@ a {
     margin-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    width: 100%; }
+    width: 100%;
+    box-sizing: border-box; }
 .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .shipping-calculator-form .form-row {
   border: 1px solid #DDD; }
 .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .shipping-calculator-form .button {
@@ -411,6 +493,23 @@ a {
   padding: 5px 10px; }
   .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .shipping-calculator-form .button:hover {
     background-color: #b7b7b7; }
+@media (max-width: 768px) {
+  .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table th {
+    padding-left: 10px; }
+  .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td {
+    padding: 10px !important; } }
+@media (max-width: 500px) {
+  .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table th, .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box; }
+  .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table th {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td > p, .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td > span, .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td > strong {
+    font-size: 0.875em; }
+  .woodrobe.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table .cart-subtotal th {
+    border-bottom: 1px solid #eaeaea; } }
 .woodrobe.woocommerce-cart .woocommerce .cross-sells {
   background-color: #eaeaea;
   padding: 30px;
@@ -456,6 +555,7 @@ a {
     .woodrobe.woocommerce-account.logged-in .woocommerce .myaccount_user strong {
       color: #333; }
     .woodrobe.woocommerce-account.logged-in .woocommerce .myaccount_user a {
+      display: inline;
       color: #A3273D;
       border-bottom: 1px solid transparent; }
       .woodrobe.woocommerce-account.logged-in .woocommerce .myaccount_user a:hover {
@@ -474,7 +574,7 @@ a {
     padding: 10px 30px 30px 30px;
     border-bottom: 1px dashed #c4c4c4; }
   .woodrobe.woocommerce-account.logged-in .woocommerce > .address, .woodrobe.woocommerce-account.logged-in .woocommerce > .addresses {
-    padding: 30px;
+    padding: 30px 0;
     border-bottom: 1px solid #c4c4c4; }
   .woodrobe.woocommerce-account.logged-in .woocommerce > .addresses .address.col-1 {
     position: relative;
@@ -487,19 +587,35 @@ a {
       top: -30px;
       right: -30px;
       border-right: 1px dashed #c4c4c4; }
-  .woodrobe.woocommerce-account.logged-in .woocommerce .address .edit {
-    font-size: 0.75em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 8px 20px;
-    border-color: #c4c4c4;
-    color: #c4c4c4; }
-    .woodrobe.woocommerce-account.logged-in .woocommerce .address .edit:hover {
-      border-color: #A3273D; }
-  .woodrobe.woocommerce-account.logged-in .woocommerce .address address {
-    font-size: 1em;
-    line-height: 1.25em;
-    font-style: unset; }
+  .woodrobe.woocommerce-account.logged-in .woocommerce .address {
+    box-sizing: border-box; }
+    .woodrobe.woocommerce-account.logged-in .woocommerce .address.col-1 {
+      padding-left: 30px; }
+    .woodrobe.woocommerce-account.logged-in .woocommerce .address.col-2 {
+      padding-right: 30px; }
+    .woodrobe.woocommerce-account.logged-in .woocommerce .address .edit {
+      font-size: 0.75em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-color: #c4c4c4;
+      color: #c4c4c4; }
+      .woodrobe.woocommerce-account.logged-in .woocommerce .address .edit:hover {
+        border-color: #A3273D; }
+    .woodrobe.woocommerce-account.logged-in .woocommerce .address address {
+      font-size: 1em;
+      line-height: 1.25em;
+      font-style: unset; }
+@media (max-width: 768px) {
+  .woodrobe.woocommerce-account.logged-in .woocommerce > .addresses .address {
+    padding: 0 30px; }
+  .woodrobe.woocommerce-account.logged-in .woocommerce > .addresses .address.col-1 {
+    width: 100%;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #c4c4c4; }
+    .woodrobe.woocommerce-account.logged-in .woocommerce > .addresses .address.col-1:after {
+      height: 0; } }
 .woodrobe.woocommerce-account.woocommerce-edit-address .woocommerce form, .woodrobe.woocommerce-account.woocommerce-edit-account .woocommerce form {
   padding: 30px;
   box-sizing: border-box;
@@ -612,6 +728,9 @@ a {
     font-size: 0.875em; }
 .woodrobe .woocommerce form .form-row-first, .woodrobe .woocommerce form .form-row-last, .woodrobe .woocommerce-page form .form-row-first, .woodrobe .woocommerce-page form .form-row-last {
   width: 48%; }
+@media (max-width: 500px) {
+  .woodrobe.woocommerce-account.woocommerce-edit-address .woocommerce form > p, .woodrobe.woocommerce-account.woocommerce-edit-account .woocommerce form > p {
+    width: 100% !important; } }
 .woodrobe.woocommerce-checkout .woocommerce {
   background-color: #e2e2e2;
   box-sizing: border-box;

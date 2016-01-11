@@ -31,6 +31,7 @@
             }
 
             a{
+                display:inline;
                 color:c(secondary);
                 border-bottom:1px solid transparent;
 
@@ -63,7 +64,7 @@
         }
 
         > .address, > .addresses{
-            padding:30px;
+            padding:30px 0;
             border-bottom:1px solid darken(c(gray), 10%);
         }
 
@@ -85,6 +86,15 @@
         }
 
         .address{
+            box-sizing:border-box;
+
+            &.col-1{
+                padding-left:30px;
+            }
+            &.col-2{
+                padding-right:30px;
+            }
+
             .edit{
                 @extend .wdrobe-button;
                 font-size:em(12);
@@ -104,6 +114,29 @@
                 font-size:em(16);
                 line-height:em(20,16);
                 font-style:unset;
+            }
+        }
+    }
+}
+
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+&.woocommerce-account.logged-in .woocommerce{
+    @include breakpoint(tablet){
+        > .addresses{
+            .address{
+                padding:0 30px;
+            }
+
+            .address.col-1{
+                width:100%;
+                padding-bottom:30px;
+                margin-bottom:30px;
+                border-bottom:1px dashed darken(c(gray), 10%);
+
+                &:after{
+                    height:0;
+                }
             }
         }
     }
@@ -275,4 +308,18 @@
 
 .woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
     width:48%;
+}
+
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+&.woocommerce-account.woocommerce-edit-address, &.woocommerce-account.woocommerce-edit-account{
+    .woocommerce{
+        @include breakpoint(phone){
+            form{
+                > p{
+                    width:100% !important;
+                }
+            }
+        }
+    }
 }
