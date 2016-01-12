@@ -192,7 +192,8 @@ a {
   border-radius: 0;
   right: 10px; }
 .woodrobe b {
-  background: none !important; }
+  background: none !important;
+  background-image: none !important; }
 .woodrobe b::after {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
