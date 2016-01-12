@@ -183,11 +183,11 @@ a {
 .woodrobe .select2-choice {
   background-clip: padding-box;
   background-color: inherit;
-  background-image: none;
+  background-image: none !important;
   height: auto;
   border-radius: 0; }
 .woodrobe .select2-container .select2-choice .select2-arrow {
-  background: none;
+  background: none !important;
   border: none;
   border-radius: 0;
   right: 10px; }
@@ -211,7 +211,7 @@ a {
   top: 50%; }
 .woodrobe .select2-dropdown-open .select2-choice {
   background-color: inherit;
-  background-image: none;
+  background-image: none !important;
   cursor: pointer; }
 .woodrobe .select2-container .select2-choice {
   padding: 15px;
