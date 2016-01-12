@@ -74,7 +74,7 @@ input:focus {
   outline: none; }
 
 input[type='submit'] {
-  -webkit-appearance: none;
+  -webkit-appearance: inherit !important;
   -moz-appearance: none;
   appearance: none;
   border-radius: 0; }
