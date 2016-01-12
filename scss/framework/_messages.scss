@@ -8,6 +8,10 @@
     a{
         color:c(secondary);
     }
+
+    .wc-forward{
+        @extend .button;
+    }
 }
 
 &.woocommerce-account.logged-in, &.woocommerce-checkout{
