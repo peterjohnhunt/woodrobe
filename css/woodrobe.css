@@ -191,25 +191,25 @@ a {
   border: none;
   border-radius: 0;
   right: 10px; }
-.woodrobe b {
-  background: none !important;
-  background-image: none !important; }
-.woodrobe b::after {
-  -moz-border-bottom-colors: none;
-  -moz-border-left-colors: none;
-  -moz-border-right-colors: none;
-  -moz-border-top-colors: none;
-  border-color: #666 transparent transparent;
-  border-image: none;
-  border-style: solid;
-  border-width: 4px;
-  content: "";
-  display: block;
-  left: 50%;
-  margin-left: -7px;
-  margin-top: -2px;
-  position: absolute;
-  top: 50%; }
+  .woodrobe .select2-container .select2-choice .select2-arrow b {
+    background: none !important;
+    background-image: none !important; }
+  .woodrobe .select2-container .select2-choice .select2-arrow b::after {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #666 transparent transparent;
+    border-image: none;
+    border-style: solid;
+    border-width: 4px;
+    content: "";
+    display: block;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%; }
 .woodrobe .select2-dropdown-open .select2-choice {
   background-color: inherit;
   background-image: none !important;
