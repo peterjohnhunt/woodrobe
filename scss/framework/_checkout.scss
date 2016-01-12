@@ -156,6 +156,27 @@
     }
 }
 
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+&.woocommerce-checkout .woocommerce .checkout_coupon{
+    @include breakpoint(phone){
+        p{
+            width:100%;
+            margin-right:0;
+        }
+
+        input{
+            font-size:em(14) !important;
+            width:100% !important;
+            text-align:center;
+
+            &[type="text"]{
+                margin-bottom:10px;
+            }
+        }
+    }
+}
+
 
 //▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
 // _Form
@@ -205,6 +226,21 @@
             border:1px solid c(gray);
             padding:10px;
             resize:none;
+        }
+    }
+}
+
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+&.woocommerce-checkout #customer_details{
+    @include breakpoint(phone){
+        .woocommerce-billing-fields,.shipping_address{
+            > p{
+                width:100% !important;
+                margin-right:0 !important;
+                float:none;
+                padding:0;
+            }
         }
     }
 }
@@ -305,5 +341,17 @@
     #payment div.form-row{
         padding-bottom:0;
         margin:0;
+    }
+}
+
+//☲☲☲☲☲☲☲☲☲☲☲╣ BREAKPOINTS ╠☲☲☲☲☲☲☲☲☲☲☲☲//
+
+&.woocommerce-checkout{
+    @include breakpoint(phone){
+        #payment.woocommerce-checkout-payment{
+            .payment_methods.methods{
+                padding:0;
+            }
+        }
     }
 }
