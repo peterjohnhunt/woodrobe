@@ -1,14 +1,12 @@
-.woocommerce {
-    .woocommerce-error,.woocommerce-error,.woocommerce-message,.woocommerce-info {
-        @extend %wd-bg-white;
+.woocommerce-error,.woocommerce-error,.woocommerce-message,.woocommerce-info {
+    @extend %wd-bg-white;
 
-        &,li, a{
-            font-family:$family !important;
-        }
+    &,li, a{
+        font-family:$family !important;
+    }
 
-        a{
-            color:c(secondary);
-        }
+    a{
+        color:c(secondary);
     }
 }
 
